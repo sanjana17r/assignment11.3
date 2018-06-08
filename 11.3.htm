@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a id="google" target="_self" href="https://www.w3resource.com/">google</a>
+    <div id="attrs"></div>
+    <button onclick="f1()">Show Attributes Of link</button><!--on clicking this button,attributes of anchor tag are displayed-->
+    <button onclick="f2()">Remove Result</button><!--on clicking this button,attributes of anchor tag are removed-->
+    <script>
+       function f1()//this function gets called when 'show attributes' button is clicked
+        {
+            var x1 = document.getElementById("google").id;//id of anchor tag is stored in this variable
+            var x2 = document.getElementById("google").href;//href of anchor tag is stored in this variable
+            var x3 = document.getElementById("google").target;//target of anchor tag is stored in this variable
+            document.getElementById("attrs").innerHTML = ('The id of the element is '+x1+', The href of this element is '+x2+', The target of the element is '+x3);
+            //here the necessary details are consoled out.
+        }
+        function f2()//this function is called when 'remove result' button is clicked
+        {
+            document.getElementById("attrs").innerHTML=('');//this displays blank data, instead of the attributes,hence the attributes are removed.                 
+        }
+    </script>
+</body>
+</html>
